@@ -1,0 +1,22 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "This is a backend API",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "start": "nodemon start",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "backend"
+  ],
+  "author": "Dipin Sharma",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "mongoose": "^7.4.3"
+  }
+}
