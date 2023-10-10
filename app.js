@@ -7,7 +7,7 @@ app.use(express.json());
 app.use(cors());
 app.use('/',userRoutes);
 app.use('/',ideRoutes);
-// last middleware(404)
+// last m iddleware(404)
 app.use((request,response,next)=>{
     response.json({message:"invalid URL"})
 })
