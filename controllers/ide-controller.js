@@ -15,7 +15,7 @@ export const ideController = {
     }
 
     try {
-      var envData = { OS: "windows", cmd: "g++", options: { timeout: 10000 } };
+      var envData = { OS: "windows", cmd: "g++", options: { timeout: 1000000 } };
       const outputs = await Promise.all(testCases.map(async (input) => {
         return new Promise((resolve, reject) => {
           compiler.compileCPPWithInput(envData, code, input, function (data) {
@@ -63,7 +63,7 @@ export const ideController = {
     try {
       const doc = await QuestionModel.findOne({ number: questionNumber });
       const testCases=doc.solutionTestCases;
-      var envData = { OS: "windows", cmd: "g++", options: { timeout: 10000 } };
+      var envData = { OS: "windows", cmd: "g++", options: { timeout: 1000000 } };
       const outputs = await Promise.all(testCases.map(async (input) => {
         return new Promise((resolve, reject) => {
           compiler.compileCPPWithInput(envData, code, input, function (data) {
@@ -193,7 +193,7 @@ export const ideController = {
     //   }
     
     //   try {
-      //     var envData = { OS: "windows", cmd: "g++", options: { timeout: 10000 } };
+      //     var envData = { OS: "windows", cmd: "g++", options: { timeout: 1000000 } };
       //     const compilePromises = testCases.map((input) => {
         //       return new Promise(async (resolve) => {
           //         try {
