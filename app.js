@@ -7,11 +7,11 @@ app.use(express.json());
 app.use(cors());
 app.use('/',userRoutes);
 app.use('/',ideRoutes);
-// last m iddleware(404)
+// last middleware(404)
 app.use((request,response,next)=>{
     response.json({message:"invalid URL"})
 })
-const server=app.listen(1234,(err)=>{
+const server=app.listen(process.env.PORT||1234,(err)=>{
     if(err){
         console.log("server crash ",err);
     }

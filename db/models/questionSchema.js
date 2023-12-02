@@ -1,5 +1,4 @@
 import mongoose from "../connection.js";
-import { ExampleModel } from "./ExampleSchema.js";
 const Schema = mongoose.Schema;
 const questionSchema = new Schema({
     name: {

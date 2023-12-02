@@ -1,7 +1,7 @@
-const URL="mongodb+srv://admin:admin123@cluster0.dej7qho.mongodb.net/IDEdb?retryWrites=true&w=majority";
-
 import mongoose from 'mongoose';
-const promise=mongoose.connect(URL);
+import dotenv from 'dotenv';
+dotenv.config();
+const promise=mongoose.connect(process.env.URL);
 promise.then(data=>{
     console.log("DB connected ...");
 })

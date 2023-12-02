@@ -6,7 +6,6 @@ const userSchema=new Schema({
     'password':{type:SchemaTypes.String,required:true,minLength:3},
     'name':{type:SchemaTypes.String,required:true},
     'username':{type:SchemaTypes.String,required:true,unique:true}
-    // 'phone':{type:SchemaTypes.String}
 });
 
 export const userModel=mongoose.model('users',userSchema);
